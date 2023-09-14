@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Bender;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/blender/Bender.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: italic;
+    font-weight: normal;
+    src: url(../font/blender/Bender-Italic.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: normal;
+    font-weight: 100;
+    src: url(../font/blender/Bender-Light.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: italic;
+    font-weight: 100;
+    src: url(../font/blender/Bender-LightItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: normal;
+    font-weight: bold;
+    src: url(../font/blender/Bender-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: italic;
+    font-weight: bold;
+    src: url(../font/blender/Bender-BoldItalic.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: normal;
+    font-weight: 900;
+    src: url(../font/blender/Bender-Black.woff) format("woff");
+}
+
+@font-face {
+    font-family: Bender;
+    font-style: italic;
+    font-weight: 900;
+    src: url(../font/blender/Bender-BlackItalic.woff) format("woff");
+}
