@@ -1,15 +1,17 @@
 :root {
     --mainWidth: 1500px;
 
-    --headerColor: white;
-    --footerColor: white;
-    --backgroundColor: white;
-    --buttonColor: black;
+    --backgroundColor: var(--color-black);
+    --textColor: var(--color-white);
 
-    --headerTextColor: black;
-    --buttonTextColor: white;
-    --textColor: black;
-    --footerTextColor: black;
+    --color-black: #080605;
+    --color-gray: #595358;
+    --color-brown: #403d35;
+    --color-lightBrown:#8a7c64;
+    --color-yellow: #e8be6b;
+    --color-white: #d6d4c9;
+    --color-green: #75fa4c;
+    --color-red: #d73225;
 }
 
 *, *::before, *::after {
@@ -30,8 +32,13 @@
 body {
     min-height: 100vh;
     color: var(--textColor);
-    font-family: Bender;
+    font-family: Bender, sans-serif;
     background: var(--backgroundColor);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 }
 
 img, picture, svg, video {
@@ -50,13 +57,68 @@ summary,
 }
 
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--mainWidth);
+}
 
+header img {
+    width: 125px;
 }
 
 main {
+    width: var(--mainWidth);
+    min-height: calc(100vh - 125px);
+    padding: 25px;
+}
 
+main h2 {
+    margin-bottom: 15px;
+}
+
+.ammo-types {
+    display: flex;
+    gap: 15px;
+
+    height: 312px;
+    width: fit-content;
+}
+
+.ammo-types .column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ammo-types .item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+
+    border-radius: 15px;
+    background: var(--color-brown);
 }
 
 footer {
+    width: var(--mainWidth);
+}
 
+@media only screen and (max-width: 1500px) {
+    :root {
+        --mainWidth: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --mainWidth: 900px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --mainWidth: 100%;
+    }
 }

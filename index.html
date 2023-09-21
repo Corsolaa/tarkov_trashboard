@@ -12,14 +12,57 @@
 
     <link rel="stylesheet" href="css/blender-font.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="img/EFT.ico">
 </head>
 <body>
 
-<header></header>
+<header>
+    <img src="img/eft_logo.webp" alt="eft_logo">
+    <h1>Tarkov Trashboard</h1>
+</header>
 
-<main></main>
+<main>
+    <div class="content">
+        <h2>Ammo Types</h2>
+        <div class="ammo-types">
+            <div class="column">
+                <div class="item">
+                    <img src="https://assets.tarkov.dev/54527a984bdc2d4e668b4567-grid-image.webp" alt="">
+                    <h3>5.56x45mm</h3>
+                </div>
+                <div class="item">
+                    <img src="https://assets.tarkov.dev/560d5e524bdc2d25448b4571-grid-image.webp" alt="">
+                    <h3>12/70</h3>
+                </div>
+                <div class="item">
+                    <img src="https://assets.tarkov.dev/56dfef82d2720bbd668b4567-grid-image.webp" alt="">
+                    <h3>5.45x39mm</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="item">
+                    <img src="https://assets.tarkov.dev/54527a984bdc2d4e668b4567-grid-image.webp" alt="">
+                    <h3>5.56x45mm</h3>
+                </div>
+                <div class="item">
+                    <h3>12/70</h3>
+                </div>
+                <div class="item">
+                    <img src="https://assets.tarkov.dev/56dfef82d2720bbd668b4567-grid-image.webp" alt="">
+                    <h3>5.45x39mm</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 <footer></footer>
+
+<script type="module" src="js/getAmmoValues.js"></script>
+<script type="module" src="js/createAmmo.js"></script>
+<script type="module" src="js/apiCall.js"></script>
+<script src="js/Ammo.js"></script>
 
 </body>
 </html>
