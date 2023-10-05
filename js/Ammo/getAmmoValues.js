@@ -1,4 +1,4 @@
-import {apiCall} from "./apiCall.js";
+import {apiCall} from "../apiCall.js";
 
 export async function getAmmoValues() {
     let data;

@@ -7,6 +7,7 @@
     --color-black: #080605;
     --color-gray: #595358;
     --color-brown: #403d35;
+    --color-mediumBrown: #56513f;
     --color-lightBrown:#8a7c64;
     --color-yellow: #e8be6b;
     --color-white: #d6d4c9;
@@ -60,7 +61,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: var(--mainWidth);
+    padding: 0 15px;
 }
 
 header img {
@@ -79,30 +82,66 @@ main h2 {
 
 .ammo-types {
     display: flex;
-    gap: 15px;
-
-    height: 312px;
-    width: fit-content;
-}
-
-.ammo-types .column {
-    display: flex;
     flex-direction: column;
-    gap: 15px;
+
+    width: 100%;
 }
 
 .ammo-types .item {
+    position: relative;
+
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 15px;
-
-    border-radius: 15px;
     background: var(--color-brown);
+}
+
+.ammo-types .item i {
+    position: absolute;
+    left: 80%;
+
+    font-weight: 1000;
+    font-size: 2rem;
+    transition: .3s;
+}
+
+.ammo-types .item.active i {
+    transform: rotate(180deg);
+}
+
+.ammo-types .panel {
+    background-color: var(--color-mediumBrown);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.ammo-types .panel .panel {
+    background-color: var(--color-lightBrown);
+}
+
+.ammo-types .panel .item {
+    background: var(--color-mediumBrown);
+}
+
+.ammo-types .panel .item i {
+    left: 85%;
+    font-size: 1.5rem;
 }
 
 footer {
     width: var(--mainWidth);
+}
+
+@media (max-width: 320px) {
+    header img {
+        display: none;
+    }
+
+    header h1 {
+        margin-top: 15px;
+    }
 }
 
 @media only screen and (max-width: 1500px) {
