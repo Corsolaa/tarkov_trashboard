@@ -3,6 +3,7 @@ class Ammo {
         this.name = ammo.item.name;
         this.caliber = ammo.caliber;
         this.damage = ammo.damage;
+        this.projectileCount = ammo.projectileCount;
         this.penetration = ammo.penetrationPower;
         this.armorDamage = ammo.armorDamage;
         this.fragChance = Ammo.decToProc(ammo.fragChance) ;
@@ -10,7 +11,6 @@ class Ammo {
         this.inspectImage = ammo.item.inspectImage;
         this.recoil = Ammo.decToProc(ammo.recoilModifier);
         this.accuracy = Ammo.decToProc(ammo.accuracyModifier);
-
     }
 
     static decToProc (decimal) {

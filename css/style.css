@@ -1,5 +1,5 @@
 :root {
-    --mainWidth: 1500px;
+    --mainWidth: 100%;
 
     --backgroundColor: var(--color-black);
     --textColor: var(--color-white);
@@ -99,7 +99,7 @@ main h2 {
 
 .ammo-types .item i {
     position: absolute;
-    left: 80%;
+    right: 25px;
 
     font-weight: 1000;
     font-size: 2rem;
@@ -111,14 +111,27 @@ main h2 {
 }
 
 .ammo-types .panel {
-    background-color: var(--color-mediumBrown);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
 }
 
-.ammo-types .panel .panel {
-    background-color: var(--color-lightBrown);
+.ammo-types .panel .ammo_info {
+    padding: 15px;
+}
+
+.ammo_info .column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ammo_info .peace {
+    background: var(--color-mediumBrown);
+    width: calc(100% / 2.1);
+    padding: 5px;
 }
 
 .ammo-types .panel .item {
@@ -126,8 +139,13 @@ main h2 {
 }
 
 .ammo-types .panel .item i {
-    left: 85%;
+    top: 60%;
+    right: 20px;
     font-size: 1.5rem;
+}
+
+.ammo-types .panel .panel {
+    background-color: var(--color-lightBrown);
 }
 
 footer {
@@ -144,20 +162,14 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1500px) {
+@media (min-width: 400px) {
+    .ammo_info .peace {
+        width: calc(100% / 3.2);
+    }
+}
+
+@media only screen and (min-width: 1200px) {
     :root {
         --mainWidth: 1200px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    :root {
-        --mainWidth: 900px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    :root {
-        --mainWidth: 100%;
     }
 }

@@ -1,18 +1,22 @@
 import {getAmmoValues} from "./getAmmoValues.js";
+import ammoDict from "../../json/ammo_cal.json" assert { type: 'json' };
 
-const ammo_chart = await getAmmoValues()
-
-function createAmmo() {
-    let counter = 0;
+// Creates all the Ammo Object from the API data.
+async function createAmmo() {
+    const ammo_chart = await getAmmoValues()
     let ammo = [];
 
-    while (counter < ammo_chart.length) {
-        const ammoBit = new Ammo(ammo_chart[counter])
-        ammo.push(ammoBit)
-        counter++;
-    }
+    ammo_chart.forEach((ammo_bit) => {
+        ammo.push(new Ammo(ammo_bit));
+    });
 
     return ammo
+}
+
+function createEle(ammoList) {
+    let hello, bruh, boo;
+    hello, bruh, boo+= "bruh"
+
 }
 
 const ammo = createAmmo();
