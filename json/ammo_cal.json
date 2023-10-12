@@ -1,0 +1,86 @@
+[
+  {
+    "name": "12 Gauge",
+    "calId": "Caliber12g"
+  },
+  {
+    "name": "20 Gauge",
+    "calId": "Caliber20g"
+  },
+  {
+    "name": "23x75 mm",
+    "calId": "Caliber23x75"
+  },
+  {
+    "name": "9x18 mm",
+    "calId": "Caliber9x18PM"
+  },
+  {
+    "name": "7.62x25 TT",
+    "calId": "Caliber762x25TT"
+  },
+  {
+    "name": "9x19mm Para",
+    "calId": "Caliber9x19PARA"
+  },
+  {
+    "name": ".45 ACP",
+    "calId": "Caliber1143x23ACP"
+  },
+  {
+    "name": "9x21 mm",
+    "calId": "Caliber9x21"
+  },
+  {
+    "name": "357 Magnum",
+    "calId": "Caliber9x33R"
+  },
+  {
+    "name": "5.7x28 mm",
+    "calId": "Caliber57x28"
+  },
+  {
+    "name": "4.6x30 mm",
+    "calId": "Caliber46x30"
+  },
+  {
+    "name": "9x39 mm",
+    "calId": "Caliber9x39"
+  },
+  {
+    "name": ".366",
+    "calId": "Caliber366TKM"
+  },
+  {
+    "name": "5.45x39 mm",
+    "calId": "Caliber545x39"
+  },
+  {
+    "name": "5.56x45 mm",
+    "calId": "Caliber556x45NATO"
+  },
+  {
+    "name": "7.62x39 mm",
+    "calId": "Caliber762x39"
+  },
+  {
+    "name": ".300 blk",
+    "calId": "Caliber762x35"
+  },
+  {
+    "name": "7.62x51 mm",
+    "calId": "Caliber762x51"
+  },
+  {
+    "name": "7.62x54R",
+    "calId": "Caliber762x54R"
+  },
+  {
+    "name": "12.7x55 mm",
+    "calId": "Caliber127x55"
+  },
+  {
+    "name": ".338 LM",
+    "calId": "Caliber86x70"
+  }
+]
