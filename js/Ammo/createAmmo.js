@@ -1,4 +1,6 @@
 import {getAmmoValues} from "./getAmmoValues.js";
+import {createEle} from "../createElements.js";
+import {accordions_movement} from "../functions.js";
 
 // Creates all the Ammo Object from the API data.
 async function createAmmo() {
@@ -12,11 +14,10 @@ async function createAmmo() {
     return ammo
 }
 
-function createEle(ammoList) {
+const ammo = await createAmmo()
 
+createEle([ammo])
 
-}
+console.log(ammo);
 
-const ammo = createAmmo();
-
-console.log(ammo)
+accordions_movement();
