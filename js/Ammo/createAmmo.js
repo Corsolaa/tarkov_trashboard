@@ -1,5 +1,4 @@
 import {getAmmoValues} from "./getAmmoValues.js";
-import ammoDict from "../../json/ammo_cal.json" assert { type: 'json' };
 
 // Creates all the Ammo Object from the API data.
 async function createAmmo() {
@@ -14,8 +13,7 @@ async function createAmmo() {
 }
 
 function createEle(ammoList) {
-    let hello, bruh, boo;
-    hello, bruh, boo+= "bruh"
+
 
 }
 
