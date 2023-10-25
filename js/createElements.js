@@ -1,16 +1,17 @@
 import ammoDict from "../json/ammo_cal.json" assert {type: 'json'};
 
-export function createEle(ammoList) {
-    const ammo_types_ele = document.querySelector(".ammo-types");
-    ammoList.forEach((ammo_type) => {
-        const top_layer = create_item_section(ammo_type[0].gridImageLink,
-            get_caliber_name(ammo_type[0].caliber));
-        const caliber_section = create_caliber_section(ammo_type);
-        ammo_types_ele.append(top_layer, caliber_section);
+export function createAmmoTypesContent(ammoList) {
+    const ammoTypesEle = document.querySelector(".ammo-types");
+
+    ammoList.forEach((ammoType) => {
+        const topLayer = createItemDivSection(ammoType[0].gridImageLink,
+            getCaliberName(ammoType[0].caliber));
+        const caliberSection = createCaliberDivSection(ammoType);
+        ammoTypesEle.append(topLayer, caliberSection);
     });
 }
 
-function get_caliber_name(calId) {
+function getCaliberName(calId) {
     // Check if valid Caliber ID.
     if (calId in ammoDict) {
         return ammoDict[calId];
@@ -18,58 +19,59 @@ function get_caliber_name(calId) {
     return false;
 }
 
-function create_caliber_section(ammo_array) {
-    const top_panel = create_div_class("panel");
-    const middle_layer = create_item_section(ammo_array[0].gridImageLink, ammo_array[0].name);
-    const middle_panel = create_div_class("panel");
+function createCaliberDivSection(ammoArray) {
+    const top_panel = createDivWithClass("panel");
+    ammoArray.forEach((ammoBit) => {
+        const middleLayer = createItemDivSection(ammoBit.gridImageLink, ammoBit.name);
+        const middlePanel = createDivWithClass("panel");
 
-    middle_panel.append(create_ammo_info_element(ammo_array[0]));
-    top_panel.append(middle_layer, middle_panel);
+        middlePanel.append(createAmmoInfoElement(ammoBit));
+        top_panel.append(middleLayer, middlePanel);
+    })
 
     return top_panel;
 }
 
 
-function create_item_section(grid_image, title) {
+function createItemDivSection(gridImage, title) {
     const section = document.createElement("div");
-    const head_img = document.createElement("img");
-    const head_title = document.createElement("h3");
+    const headImage = document.createElement("img");
+    const headTitle = document.createElement("h3");
     const arrow = document.createElement("i");
 
     section.classList.add("item", "section");
-    head_img.src = grid_image;
-    head_img.alt = "section header image";
-    head_title.innerText = title;
+    headImage.src = gridImage;
+    headImage.alt = "section header image";
+    headTitle.innerText = title;
     arrow.classList.add("fa-solid", "fa-chevron-up");
 
-    section.append(head_img, head_title, arrow);
+    section.append(headImage, headTitle, arrow);
     return section
 }
 
-function create_ammo_info_element(ammo) {
-    const ammo_info = create_div_class("ammo_info");
-    const column = create_div_class("column");
-    const peaces = [["damage", ammo.damage], ["pen", ammo.penetration], ["ar damage", ammo.armorDamage],
+function createAmmoInfoElement(ammo) {
+    const ammoInfo = createDivWithClass("ammo_info");
+    const column = createDivWithClass("column");
+    const peaces = [["damage", ammo.damage], ["pen", ammo.penetration], ["damage (ar)", ammo.armorDamage],
         ["frag%", ammo.fragChance], ["recoil", ammo.recoil], ["accuracy", ammo.accuracy]];
 
     peaces.forEach((bit) => {
-        const peace = create_peace(bit[0], bit[1])
+        const peace = createPeaceElement(bit[0], bit[1]);
         column.appendChild(peace);
     });
 
-    ammo_info.appendChild(column);
-
-    return ammo_info;
+    ammoInfo.appendChild(column);
+    return ammoInfo;
 }
 
-function create_peace(type, value) {
-    const peace = create_div_class("peace");
-    peace.innerText = type + "<br>" + value
+function createPeaceElement(type, value) {
+    const peace = createDivWithClass("peace");
+    peace.innerHTML = type + "<br>" + value;
     return peace;
 }
 
-function create_div_class(class_name) {
+function createDivWithClass(className) {
     const div = document.createElement("div");
-    div.classList.add(class_name)
+    div.classList.add(className);
     return div;
 }

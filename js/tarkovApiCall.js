@@ -1,5 +1,4 @@
-// This calls the Tarkov API and retrieves the data from the query parameter.
-export async function apiCall(query ) {
+export async function tarkovApiCall(query) {
     let r = await fetch('https://api.tarkov.dev/graphql', {
         method: 'POST',
         headers: {

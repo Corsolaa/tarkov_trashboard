@@ -1,4 +1,4 @@
-export function accordions_movement () {
+export function accordionsMovement () {
     const accordions = document.querySelectorAll(".section");
 
     accordions.forEach((item) => {

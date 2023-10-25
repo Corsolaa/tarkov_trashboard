@@ -19,5 +19,8 @@
   "Caliber762x51": "7.62x51 mm",
   "Caliber762x54R": "7.62x54R",
   "Caliber127x55": "12.7x55 mm",
-  "Caliber86x70": ".338 LM"
+  "Caliber86x70": ".338 LM",
+  "Caliber40x46": "40mm (US)",
+  "Caliber40mmRU": "40mm (RU)",
+  "Caliber26x75": "26mm (Flare)"
 }
