@@ -1,20 +1,3 @@
-:root {
-    --mainWidth: 100%;
-
-    --backgroundColor: var(--color-black);
-    --textColor: var(--color-white);
-
-    --color-black: #080605;
-    --color-gray: #595358;
-    --color-brown: #403d35;
-    --color-mediumBrown: #56513f;
-    --color-lightBrown:#8a7c64;
-    --color-yellow: #e8be6b;
-    --color-white: #d6d4c9;
-    --color-green: #75fa4c;
-    --color-red: #d73225;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -78,6 +61,37 @@ main {
 
 main h2 {
     margin-bottom: 15px;
+}
+
+.search_bar_con {
+    height: 32px;
+    margin-bottom: 15px;
+
+    & label {
+        display: flex;
+        gap: 15px;
+
+        height: 100%;
+        width: 100%;
+
+        & input {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .clear_but {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 32px;
+        width: 32px;
+
+        & i {
+            font-size: 32px;
+        }
+    }
 }
 
 .ammo-types {
@@ -149,7 +163,14 @@ main h2 {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
     width: var(--mainWidth);
+    padding-bottom: 25px;
+
+    & a {
+        color: var(--color-lightBrown);
+    }
 }
 
 @media (max-width: 320px) {

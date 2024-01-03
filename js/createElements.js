@@ -1,4 +1,4 @@
-import ammoDict from "../json/ammo_cal.json" assert {type: 'json'};
+import ammoDict from "../json/ammo_cal_name.json" assert {type: 'json'};
 
 export function createAmmoTypesContent(ammoList) {
     const ammoTypesEle = document.querySelector(".ammo-types");

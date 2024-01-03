@@ -14,7 +14,7 @@ class Ammo {
 
     // Calculate the decimal chance to percentages.
     static decToProc (decimal) {
-        return decimal * 100
+        return Math.round(decimal * 100)
     }
 
     // When there are multiple projectiles, not it in damage.
