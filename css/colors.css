@@ -1,0 +1,16 @@
+:root {
+    --mainWidth: 100%;
+
+    --backgroundColor: var(--color-black);
+    --textColor: var(--color-white);
+
+    --color-black: #080605;
+    --color-gray: #595358;
+    --color-brown: #403d35;
+    --color-mediumBrown: #56513f;
+    --color-lightBrown:#8a7c64;
+    --color-yellow: #e8be6b;
+    --color-white: #d6d4c9;
+    --color-green: #75fa4c;
+    --color-red: #d73225;
+}

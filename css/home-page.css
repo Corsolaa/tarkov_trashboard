@@ -1,20 +1,3 @@
-:root {
-    --mainWidth: 100%;
-
-    --backgroundColor: var(--color-black);
-    --textColor: var(--color-white);
-
-    --color-black: #080605;
-    --color-gray: #595358;
-    --color-brown: #403d35;
-    --color-mediumBrown: #56513f;
-    --color-lightBrown:#8a7c64;
-    --color-yellow: #e8be6b;
-    --color-white: #d6d4c9;
-    --color-green: #75fa4c;
-    --color-red: #d73225;
-}
-
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -22,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Bender, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -33,7 +17,6 @@
 body {
     min-height: 100vh;
     color: var(--textColor);
-    font-family: Bender, sans-serif;
     background: var(--backgroundColor);
 
     display: flex;
@@ -57,6 +40,10 @@ summary,
     cursor: pointer;
 }
 
+.hide {
+    display: none !important;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -78,6 +65,55 @@ main {
 
 main h2 {
     margin-bottom: 15px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search_bar_con {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+
+    & label {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        height: 100%;
+        width: 100%;
+
+        & input {
+            height: 100%;
+            width: 100%;
+            padding: 8px;
+            text-align: center;
+            border-radius: 8px;
+
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            border: 1px var(--color-mediumBrown) solid;
+            background: var(--color-brown);
+            color: var(--color-white);
+        }
+    }
+
+    .clear_but {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 32px;
+        width: 32px;
+
+        & i {
+            font-size: 32px;
+        }
+    }
 }
 
 .ammo-types {
@@ -149,7 +185,14 @@ main h2 {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
     width: var(--mainWidth);
+    padding-bottom: 25px;
+
+    & a {
+        color: var(--color-lightBrown);
+    }
 }
 
 @media (max-width: 320px) {
