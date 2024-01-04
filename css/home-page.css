@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Bender, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +17,6 @@
 body {
     min-height: 100vh;
     color: var(--textColor);
-    font-family: Bender, sans-serif;
     background: var(--backgroundColor);
 
     display: flex;
@@ -38,6 +38,10 @@ summary,
 [type=submit],
 [type=checkbox] {
     cursor: pointer;
+}
+
+.hide {
+    display: none !important;
 }
 
 header {
@@ -63,12 +67,20 @@ main h2 {
     margin-bottom: 15px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .search_bar_con {
-    height: 32px;
+    width: 100%;
+    max-width: 500px;
     margin-bottom: 15px;
 
     & label {
         display: flex;
+        align-items: center;
         gap: 15px;
 
         height: 100%;
@@ -77,6 +89,16 @@ main h2 {
         & input {
             height: 100%;
             width: 100%;
+            padding: 8px;
+            text-align: center;
+            border-radius: 8px;
+
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            border: 1px var(--color-mediumBrown) solid;
+            background: var(--color-brown);
+            color: var(--color-white);
         }
     }
 

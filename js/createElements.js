@@ -7,6 +7,8 @@ export function createAmmoTypesContent(ammoList) {
         const topLayer = createItemDivSection(ammoType[0].gridImageLink,
             getCaliberName(ammoType[0].caliber));
         const caliberSection = createCaliberDivSection(ammoType);
+
+        topLayer.classList.add("top-layer");
         ammoTypesEle.append(topLayer, caliberSection);
     });
 }
