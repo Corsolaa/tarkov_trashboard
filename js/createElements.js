@@ -1,4 +1,5 @@
-import ammoDict from "../json/ammo_cal_name.json" assert {type: 'json'};
+const response = await fetch('json/ammo_cal_name.json');
+const ammoDict = await response.json();
 
 export function createAmmoTypesContent(ammoList) {
     const ammoTypesEle = document.querySelector(".ammo-types");
